@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Sobre</title>
+        <link rel="stylesheet" media="all" href="../default.css"/>
+        <link rel="stylesheet" media="all" href="../ionicons.css"/>
+        <script language="javascript" src="../default.js"></script>
+    </head>
+    <body>
+        
+        <h1>Sobre</h1>
+        
+        <br/><br/>
+        
+        <hr size="1" noshade style="color:#000000"/>
+        
+        <h2>Design e desenvolvimebto</h2>
+        
+        <p>Este é o corpo do sobre ...</p>
+        
+    </body>
+    
+    <script language="javascript">
+        
+        //
+        var css = 'i { font-size: 30px; }';
+        if (isPad()) {
+            css = 'i { font-size: 50px; }';
+        }
+    
+        //
+        var head = document.head || document.getElementsByTagName('head')[0],
+        style = document.createElement('style');
+        style.type = 'text/css';
+        if (style.styleSheet){
+            style.styleSheet.cssText = css;
+        } else {
+            style.appendChild(document.createTextNode(css));
+        }
+    
+        //
+        head.appendChild(style);
+        
+        //
+        function objc_Callback (fnc, mtd) {
+            document.location = "rpcrc:" + "javaScriptCall:" + fnc + ":" + mtd;
+        }
+    
+    </script>
+    
+</html>

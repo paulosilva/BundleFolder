@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>About</title>
+        <link rel="stylesheet" media="all" href="../default.css"/>
+        <link rel="stylesheet" media="all" href="../ionicons.css"/>
+        <script language="javascript" src="../default.js"></script>
+    </head>
+    <body>
+        
+        <h1>About - Base</h1>
+        
+        <br/><br/>
+        
+        <!-- Toolbar
+         <div id="toolbar" style="">
+         
+         <i class="icon ion-ios-telephone-outline" onclick="javascript:objc_Callback('phone',0);"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <i class="icon ion-ios-email-outline" onclick="javascript:objc_Callback('email',1);"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <i class="icon ion-ios-upload-outline" onclick="javascript:objc_Callback('emailSharing',2);"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <i class="icon ion-ios-monitor-outline" onclick="javascript:objc_Callback('internet',3);"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <i class="icon ion-ios-personadd-outline" onclick="javascript:objc_Callback('addContact',4);"></i>
+         
+         </div>
+         <br/>
+         -->
+        
+        
+        <hr size="1" noshade style="color:#000000"/>
+        
+        <h2>Design and development</h2>
+        
+        <p>This is the about body ...</p>
+        
+    </body>
+    
+    <script language="javascript">
+        
+        //
+        var css = 'i { font-size: 30px; }';
+        if (isPad()) {
+            css = 'i { font-size: 50px; }';
+        }
+    
+    //
+    var head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+    style.type = 'text/css';
+    if (style.styleSheet){
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    
+    //
+    head.appendChild(style);
+    
+    //
+    function objc_Callback (fnc, mtd) {
+        document.location = "rpcrc:" + "javaScriptCall:" + fnc + ":" + mtd;
+    }
+    
+        </script>
+    
+</html>

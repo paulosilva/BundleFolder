@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Disclaimer</title>
+        <link rel="stylesheet" media="all" href="styles/default.css"/>
+        <link rel="stylesheet" media="all" href="styles/ionicons.css"/>
+        <script language="javascript" src="javascript/default.js"></script>
+    </head>
+    <body>
+        
+        <h1>Disclaimer</h1>
+        
+        <br/><br/>
+        
+        <hr size="1" noshade style="color:#000000"/>
+        
+        <h2>Terms</h2>
+        
+        <p>This is the disclaimer body ... </p>
+        
+        <div id="buttonbar" style="">
+            
+            <button type="button" onclick="javascript:objc_Callback('agree',0);">Agree</button>
+            |
+            <button type="button" onclick="javascript:objc_Callback('cancel',1);">Cancel</button>
+            
+        </div>
+        
+        <script language="javascript">
+            
+            //
+            function objc_Callback (fnc, mtd) {
+                
+                //
+                window.webkit.messageHandlers.messageWKScriptHandler.postMessage(fnc)
+                
+            }
+        
+            </script>
+        
+    </body>
+    
+</html>
+b

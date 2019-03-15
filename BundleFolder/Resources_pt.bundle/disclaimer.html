@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Temos do Serviço</title>
+        <link rel="stylesheet" media="all" href="styles/default.css"/>
+        <link rel="stylesheet" media="all" href="styles/ionicons.css"/>
+        <script language="javascript" src="javascript/default.js"></script>
+    </head>
+    <body>
+        
+        <h1>Termos do Serviço</h1>
+        
+        <br/><br/>
+        
+        <hr size="1" noshade style="color:#000000"/>
+        
+        <h2>Termos</h2>
+        
+        <p>Estes são os temos de utilização ... </p>
+        
+        <div id="buttonbar" style="">
+            
+            <button type="button" onclick="javascript:objc_Callback('agree',0);">Concordo</button>
+            |
+            <button type="button" onclick="javascript:objc_Callback('cancel',1);">Cancelar</button>
+            
+        </div>
+        
+        <script language="javascript">
+            
+            //
+            function objc_Callback (fnc, mtd) {
+                
+                //
+                window.webkit.messageHandlers.messageWKScriptHandler.postMessage(fnc)
+                
+            }
+        
+            </script>
+        
+    </body>
+    
+</html>
