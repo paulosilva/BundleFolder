@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // languages
+        ViewController.languages()
+        
         //
         //webView.navigationDelegate = self
         
@@ -126,6 +129,21 @@ class ViewController: UIViewController {
 
      }
 
+    static func languages() { // -> [String] {
+        //var languages = [String]()
+        let currentLocale = NSLocale.current as NSLocale
+        for languageCode in NSLocale.availableLocaleIdentifiers {
+            if let name = currentLocale.displayName(forKey: NSLocale.Key.languageCode, value: languageCode) {
+                //, !languages.contains(name) {
+                //languages.append(name)
+                
+                print("languageCode: \(languageCode)")
+                print("displayName: \(languageCode)")
+            }
+        }
+        //return languages.sorted()
+    }
+    
 }
 
 extension ViewController: CWKWebViewControllerDelegate {
